@@ -1,5 +1,18 @@
 "use client";
-import { useState } from "react";
+import { FC, useState } from "react";
+
+interface Group {
+  [key: string]: string;
+}
+
+interface TailwindListProps {
+  group: Group;
+}
+
+interface TailwindItemProps {
+  tailwind: string;
+  css: string;
+}
 
 export default function Page() {
   const group1 = {
@@ -26,7 +39,7 @@ export default function Page() {
     "border-2": "border-width: 2px;",
     "border-white": "border-color: var(--white);",
   };
-  const TailwindList = ({ group }) => {
+  const TailwindList: FC<TailwindListProps> = ({ group }) => {
     return (
       <div className="flex flex-col gap-12">
         {Object.keys(group).map((key) => {
@@ -41,7 +54,7 @@ export default function Page() {
       </div>
     );
   };
-  const TailwindItem = ({ tailwind, css }) => {
+  const TailwindItem: FC<TailwindItemProps> = ({ tailwind, css }) => {
     const [inputVal, setInputVal] = useState("");
     return (
       <div className="flex flex-col items-between justify-center transition-all">
