@@ -34,10 +34,10 @@ export default function Page() {
   const group3 = {
     "text-black-65": "color: var(rgba(0,0,0,0.65));",
     "bg-black": "background-color: var(--black);",
+    "border-white": "border-color: var(--white);",
     "text-base": "font-size: 12px;",
     "font-medium": "font-weight: 500;",
     "border-2": "border-width: 2px;",
-    "border-white": "border-color: var(--white);",
   };
   const TailwindList: FC<TailwindListProps> = ({ group }) => {
     return (
