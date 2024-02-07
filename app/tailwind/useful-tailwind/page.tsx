@@ -57,7 +57,7 @@ export default function Page() {
   const TailwindItem: FC<TailwindItemProps> = ({ tailwind, css }) => {
     const [inputVal, setInputVal] = useState("");
     return (
-      <div className="flex flex-col items-between justify-center transition-all">
+      <div className="flex flex-col items-between justify-center transition-all font-mono">
         <div className={`ml-8 ${inputVal === tailwind && "text-success"} peer`}>
           {css}
         </div>
