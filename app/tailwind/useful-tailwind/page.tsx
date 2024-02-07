@@ -30,7 +30,13 @@ export default function Page() {
     return (
       <div className="flex flex-col gap-12">
         {Object.keys(group).map((key) => {
-          return <TailwindItem tailwind={key} css={group[key]}></TailwindItem>;
+          return (
+            <TailwindItem
+              key={key}
+              tailwind={key}
+              css={group[key]}
+            ></TailwindItem>
+          );
         })}
       </div>
     );
