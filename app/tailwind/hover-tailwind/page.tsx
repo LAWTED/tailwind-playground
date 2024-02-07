@@ -36,7 +36,7 @@ export default function Page() {
         </div>
       </div>
       <div className="flex items-center justify-center mt-32">
-        <div className={`bg-brand text-white w-80 text-center rounded-2xl ${classText}`}>Button</div>
+        <div className={`bg-brand text-white w-80 text-center rounded-2xl transition ${classText}`}>Button</div>
       </div>
     </div>
   );
